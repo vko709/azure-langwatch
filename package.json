@@ -1,0 +1,20 @@
+{
+  "name": "azure-langchain",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "func start",
+    "test": "echo \"No tests yet...\""
+  },
+  "type": "module",
+  "dependencies": {
+    "@azure/functions": "^4.0.0",
+    "@langchain/core": "^0.2.14",
+    "@langchain/openai": "^0.2.1",
+    "dotenv": "^16.4.5",
+    "langchain": "^0.2.8",
+    "langwatch": "^0.1.1",
+    "openai": "^4.52.3"
+  },
+  "main": "src/{index.js,functions/*.js}"
+}
