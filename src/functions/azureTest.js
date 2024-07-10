@@ -21,9 +21,10 @@ app.http('azureTest', {
             const langwatch = new LangWatch({
                 apiKey: process.env.LANGWATCH_API_KEY
             });
+			const d = new Date();
 
             const trace = langwatch.getTrace({
-                metadata: { threadId: "mythread-123", userId: "myuser-123" },
+                metadata: { threadId: d.getTime(), userId: "userID" },
             });
 
             trace.update({
@@ -34,7 +35,7 @@ app.http('azureTest', {
 
             const model = new OpenAI({
                 openAIApiKey: process.env.OPEN_API_KEY,
-                temperature: 0.9
+                temperature: 0
             });
 
             const prompt = ChatPromptTemplate.fromTemplate(template);
