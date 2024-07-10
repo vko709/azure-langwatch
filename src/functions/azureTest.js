@@ -46,7 +46,7 @@ app.http('azureTest', {
             try {
                 const res = await chain.invoke({ product: persona, adjective: "funny" });
                 context.log("Response from chain.invoke:", res);
-				return { body: `Response from LangWatch: ${res}` };
+				return { body: `${res}` };
             } catch (invokeError) {
                 context.log("Error during chain.invoke:", invokeError);
                 return { status: 500, body: `Error during chain.invoke: ${invokeError.message}` };
